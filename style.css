@@ -1,0 +1,245 @@
+/*  fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#eef2f7;
+    color:#333;
+    transition:.3s;
+}
+
+header{
+    width:100%;
+    padding:20px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#2563eb;
+    color:white;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+header h1{
+    font-size:28px;
+}
+
+.buttons{
+    display:flex;
+    gap:10px;
+}
+
+button{
+    border:none;
+    padding:12px 18px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:15px;
+    transition:.3s;
+}
+
+button:hover{
+    transform:translateY(-2px);
+}
+
+#themeBtn{
+    background:#111827;
+    color:white;
+}
+
+button:last-child{
+    background:#16a34a;
+    color:white;
+}
+
+.container{
+    width:95%;
+    margin:25px auto;
+    display:grid;
+    grid-template-columns:40% 60%;
+    gap:20px;
+}
+
+.form,
+.resume{
+    background:white;
+    border-radius:15px;
+    padding:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,.1);
+}
+
+.form{
+    height:calc(100vh - 120px);
+    overflow-y:auto;
+}
+
+.form h2{
+    color:#2563eb;
+    margin:20px 0 10px;
+}
+
+input,
+textarea{
+    width:100%;
+    padding:12px;
+    margin:8px 0;
+    border:1px solid #d1d5db;
+    border-radius:8px;
+    outline:none;
+    transition:.3s;
+}
+
+input:focus,
+textarea:focus{
+    border-color:#2563eb;
+    box-shadow:0 0 8px rgba(37,99,235,.3);
+}
+
+textarea{
+    resize:vertical;
+    min-height:90px;
+}
+
+hr{
+    margin:20px 0;
+    border:none;
+    border-top:1px solid #ddd;
+}
+
+/* Resume */
+
+.resume{
+    min-height:1000px;
+}
+
+.top{
+    text-align:center;
+}
+
+.top img{
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid #2563eb;
+    margin-bottom:15px;
+}
+
+.top h1{
+    color:#1e3a8a;
+    margin-bottom:10px;
+}
+
+.top p{
+    color:#555;
+    margin:5px 0;
+}
+
+section{
+    margin-top:30px;
+}
+
+section h2{
+    color:#2563eb;
+    border-bottom:2px solid #2563eb;
+    padding-bottom:5px;
+    margin-bottom:15px;
+}
+
+/* Skill badges */
+
+#rSkills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.skill{
+    background:#2563eb;
+    color:white;
+    padding:8px 15px;
+    border-radius:30px;
+    font-size:14px;
+}
+
+/* Cards */
+
+.education,
+.experience,
+.project{
+    background:#f8fafc;
+    padding:15px;
+    border-radius:10px;
+    margin-bottom:15px;
+    border-left:5px solid #2563eb;
+}
+
+/* Dark Mode */
+
+.dark{
+    background:#111827;
+    color:white;
+}
+
+.dark .form,
+.dark .resume{
+    background:#1f2937;
+    color:white;
+}
+
+.dark input,
+.dark textarea{
+    background:#374151;
+    color:white;
+    border:1px solid #555;
+}
+
+.dark .education,
+.dark .experience,
+.dark .project{
+    background:#374151;
+}
+
+.dark section h2{
+    color:#60a5fa;
+    border-color:#60a5fa;
+}
+
+.progress-box{
+    width:100%;
+    height:15px;
+    background:#ddd;
+    border-radius:20px;
+    overflow:hidden;
+    margin:10px 0;
+}
+
+.progress-bar{
+    width:0%;
+    height:100%;
+    background:linear-gradient(90deg,#2563eb,#16a34a);
+    transition:0.5s;
+}
+
+#progressText{
+    font-weight:bold;
+    color:#2563eb;
+    margin-bottom:20px;
+}
+
+@media (max-width: 900px){
+    .container{
+        grid-template-columns:1fr;
+    }
+
+    .form{
+        height:auto;
+    }
+}

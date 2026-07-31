@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resume Builder</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<script src="https://kit.fontawesome.com/6b8d7b6e3d.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Resume Builder</h1>
+
+<div class="buttons">
+
+<button id="themeBtn">
+<i class="fas fa-moon"></i>
+Dark Mode
+</button>
+
+<button onclick="downloadPDF()">
+<i class="fas fa-file-pdf"></i>
+Download PDF
+</button>
+
+</div>
+
+</header>
+
+<div class="container">
+
+<!-- LEFT SIDE -->
+
+<div class="form">
+
+<h2>Personal Details</h2>
+
+<input id="name" placeholder="Full Name">
+
+<input id="email" placeholder="Email">
+
+<input id="phone" placeholder="Phone Number">
+
+<input id="linkedin" placeholder="LinkedIn URL">
+
+<input id="github" placeholder="GitHub URL">
+
+<textarea id="summary" placeholder="Professional Summary"></textarea>
+
+<hr>
+
+<h2>Profile Photo</h2>
+
+<input type="file" id="photo">
+
+<hr>
+
+<h2>Education</h2>
+
+<div id="educationContainer">
+
+<div class="education">
+
+<input class="college" placeholder="College">
+
+<input class="degree" placeholder="Degree">
+
+<input class="year" placeholder="Year">
+
+</div>
+
+</div>
+
+<button id="addEducation">
++ Add Education
+</button>
+
+<hr>
+
+<h2>Experience</h2>
+
+<div id="experienceContainer">
+
+<div class="experience">
+
+<input class="company" placeholder="Company">
+
+<input class="role" placeholder="Role">
+
+<textarea class="expDesc" placeholder="Description"></textarea>
+
+</div>
+
+</div>
+
+<button id="addExperience">
++ Add Experience
+</button>
+
+<hr>
+
+<h2>Projects</h2>
+
+<div id="projectContainer">
+
+<div class="project">
+
+<input class="projectName" placeholder="Project Name">
+
+<textarea class="projectDesc" placeholder="Description"></textarea>
+
+</div>
+
+</div>
+
+<button id="addProject">
++ Add Project
+</button>
+
+<hr>
+
+<h2>Skills</h2>
+
+<input id="skills" placeholder="HTML,CSS,JavaScript,Java,Python">
+
+<hr>
+
+<h2>Languages</h2>
+
+<input id="languages" placeholder="English,Tamil">
+
+<hr>
+
+<h2>Achievements</h2>
+
+<textarea id="achievements"></textarea>
+
+<hr>
+
+<h3>Resume Completion</h3>
+
+<div class="progress-box">
+    <div class="progress-bar" id="progressBar"></div>
+</div>
+
+<p id="progressText">0% Completed</p>
+
+</div>
+
+<!-- RIGHT SIDE -->
+
+<div class="resume" id="resume">
+
+<div class="top">
+
+<img id="previewPhoto"
+src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Crect width='140' height='140' fill='%23d1d5db'/%3E%3Ctext x='50%25' y='50%25' font-family='sans-serif' font-size='16' fill='%23555' text-anchor='middle' dominant-baseline='middle'%3EPhoto%3C/text%3E%3C/svg%3E">
+
+<h1 id="rName">
+Your Name
+</h1>
+
+<p id="rEmail"></p>
+
+<p id="rPhone"></p>
+
+<p id="rLinkedIn"></p>
+
+<p id="rGitHub"></p>
+
+</div>
+
+<section>
+
+<h2>Professional Summary</h2>
+
+<p id="rSummary"></p>
+
+</section>
+
+<section>
+
+<h2>Education</h2>
+
+<div id="rEducation"></div>
+
+</section>
+
+<section>
+
+<h2>Experience</h2>
+
+<div id="rExperience"></div>
+
+</section>
+
+<section>
+
+<h2>Projects</h2>
+
+<div id="rProjects"></div>
+
+</section>
+
+<section>
+
+<h2>Skills</h2>
+
+<div id="rSkills"></div>
+
+</section>
+
+<section>
+
+<h2>Languages</h2>
+
+<p id="rLanguages"></p>
+
+</section>
+
+<section>
+
+<h2>Achievements</h2>
+
+<p id="rAchievements"></p>
+
+</section>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
